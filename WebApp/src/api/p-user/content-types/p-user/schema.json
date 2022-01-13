@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_users",
+  "info": {
+    "singularName": "p-user",
+    "pluralName": "p-users",
+    "displayName": "pUser",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "first_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "last_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true,
+      "minLength": 6
+    },
+    "password": {
+      "type": "password",
+      "required": true,
+      "minLength": 6
+    },
+    "usertype": {
+      "type": "enumeration",
+      "enum": [
+        "member",
+        "doctor"
+      ],
+      "required": true,
+      "default": "member"
+    },
+    "members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::member.member",
+      "mappedBy": "p_user"
+    },
+    "doctor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::doctor.doctor",
+      "inversedBy": "p_users"
+    }
+  }
+}
