@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proctoring_users",
+  "info": {
+    "singularName": "proctoring-user",
+    "pluralName": "proctoring-users",
+    "displayName": "proctoringUser"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyCode": {
+      "type": "string",
+      "required": true
+    },
+    "employeeID": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
