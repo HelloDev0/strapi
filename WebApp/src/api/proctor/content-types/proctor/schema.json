@@ -1,0 +1,104 @@
+{
+  "kind": "collectionType",
+  "collectionName": "proctors",
+  "info": {
+    "singularName": "proctor",
+    "pluralName": "proctors",
+    "displayName": "proctor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "step": {
+      "type": "string",
+      "default": "1"
+    },
+    "first_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "last_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 3
+    },
+    "dob": {
+      "type": "string",
+      "required": true,
+      "minLength": 10
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "minLength": 6,
+      "unique": true
+    },
+    "mobile": {
+      "type": "biginteger",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "minLength": 6
+    },
+    "address2": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "zip": {
+      "type": "string",
+      "required": true
+    },
+    "gender": {
+      "type": "string",
+      "required": true
+    },
+    "race": {
+      "type": "string",
+      "required": true
+    },
+    "ethnicity": {
+      "type": "string",
+      "required": true
+    },
+    "step2": {
+      "type": "boolean",
+      "default": true
+    },
+    "id_proof": {
+      "type": "string"
+    },
+    "snap": {
+      "type": "string"
+    },
+    "step3": {
+      "type": "boolean",
+      "default": true
+    },
+    "video": {
+      "type": "string"
+    },
+    "emp_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "verified"
+      ]
+    }
+  }
+}
